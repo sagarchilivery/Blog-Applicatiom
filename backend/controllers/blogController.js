@@ -5,7 +5,10 @@ import { json } from "express";
 
 export const getAllBlogs = async (req, res) => {
   try {
-    const blogs = await blogModel.find({}).sort({ createdAt: -1 });
+    const blogs = await blogModel
+      .find({})
+      .sort({ createdAt: -1 })
+      .populate("author");
     res.status(200).json(blogs);
   } catch (error) {
     res.json({ message: error.message });

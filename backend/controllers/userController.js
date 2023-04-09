@@ -66,9 +66,10 @@ export const login = async (req, res, next) => {
       doesUserExist.password
     );
     if (isPasswordCorrect) {
-      return res.json("Same passcode hai bro, login Successfull");
+      // return res.status(200).json("Same passcode hai bro, login Successfull");
+      return res.status(200).json(doesUserExist);
     } else {
-      return res.json("password incorrect");
+      return res.status(400).json("password incorrect");
     }
     // res.status(200).json(doesUserExist);
   } catch (error) {
