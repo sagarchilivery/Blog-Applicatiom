@@ -60,7 +60,8 @@ export default function Auth() {
             onChange={(e: any) => {
               logInFlag ? setEmail(e.target.value) : setName(e.target.value);
             }}
-            className="p-2 rounded-sm w-[250px] text-black"
+            // className="p-2 rounded-sm w-[250px] text-black"
+            className="p-2 rounded-sm w-full text-black"
             placeholder={logInFlag ? "Email" : "Name"}
           />
           <input

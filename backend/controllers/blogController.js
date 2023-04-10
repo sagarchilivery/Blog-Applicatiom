@@ -121,7 +121,8 @@ export const getUserBlogs = async (req, res, next) => {
         .status(400)
         .json({ message: "Failed to find blog of this user id" });
     }
-    res.status(200).json({ blogs: userBlogs });
+    // res.status(200).json({ blogs: userBlogs });
+    res.status(200).json(userBlogs);
   } catch (error) {
     res.status(400).json({
       message: "Failed to find blog of this user id",

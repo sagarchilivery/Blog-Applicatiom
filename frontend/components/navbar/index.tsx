@@ -46,6 +46,14 @@ export default function Navbar() {
           >
             My Blogs
           </div>
+          <div
+            onClick={() => {
+              router.push("/createBlog");
+            }}
+            className=" cursor-pointer"
+          >
+            Create Blog
+          </div>
         </div>
       )}
 
